@@ -17,9 +17,7 @@ driver.implicitly_wait(10)
 driver.get("https://demoqa.com/webtables")
 
 for data in data_list:
-    add_button = driver.find_element(By.ID, "addNewRecordButton")
-    add_button.click()
-
+    driver.find_element(By.ID, "addNewRecordButton").click()
     driver.find_element(By.ID, "firstName").send_keys(data[0])
     driver.find_element(By.ID, "lastName").send_keys(data[1])
     driver.find_element(By.ID, "userEmail").send_keys(data[2])
